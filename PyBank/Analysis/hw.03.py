@@ -13,28 +13,33 @@ with open(csvpath) as csvfile:
     month_total = 0
     month_count = 0
     month_average = 0
-    great_profit=0
+    greatest_increase=0
+    greatest_decrease = 0
     for row in csvreader:
         rows.append(row)
         #calulate total_months
         month_count = month_count +1
         #calculate monthly total
         month_total = (int(month_total) + int(row[1]))
-        #calculate month average
         #find greatest increase
-    great_profit= 0
-    if int(row[1]) > great_profit:
-        great_profit = int(row[1])
-    else:
-        great_profit= 0
+    #intialize variable for greatest profit increase
+    #if row is bigger than greatest profit
+    if int(row[1]) > greatest_increase:
+        #greatest profit is equal to row 1
+        greatest_increase = int(row[1])
+        #else, greatest profit is equal to 0
+    #if row is less than lowest profit
+    if int(row[1]) < greatest_decrease:
+        greatest_decrease = row[1]
+  
+    
             
    
     print('Financial Analysis')
     print("---------------------------------")
     print('Total Months:', month_count)
     print('Total Month $: ', month_total)
-    print(great_profit)
-
+    print(greatest_decrease)
 #print(rows)
 
 
