@@ -22,7 +22,6 @@ with open(csvpath) as csvfile:
         month_count = month_count +1
         #calculate monthly total
         month_total = (int(month_total) + int(row[1]))
-
    
 
     print('Financial Analysis')
