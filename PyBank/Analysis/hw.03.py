@@ -40,7 +40,7 @@ with open(csvpath) as csvfile:
     print('The average change was ', round(average, 2))
     print('The greatest increase in profits was $', max(changes))
     print('The greatest decrease in profits was $', min(changes))
-    #print(changes)
+
             
  
         
