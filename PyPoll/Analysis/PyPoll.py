@@ -14,7 +14,7 @@ with open(data) as csvfile:
     for row in csvreader:
         voter_data.append(row)
     for row in csvreader:
-        candidates.append(row[2])
+        candidates.update(row[2])
 
 
 

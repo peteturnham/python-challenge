@@ -41,7 +41,25 @@ with open(csvpath) as csvfile:
     print('The greatest increase in profits was $', max(changes))
     print('The greatest decrease in profits was $', min(changes))
 
-            
+
+#writing to csv file
+output_path = os.path.join("..", "Analysis", "PyBank.csv")
+
+
+with open(output_path, 'w', newline='') as csvfile:
+
+ 
+    csvwriter = csv.writer(csvfile, delimiter=' ')
+
+    
+    csvwriter.writerow('Financial Analysis')
+    csvwriter.writerow("---------------------------------")
+    csvwriter.writerow('Total Months: 86')
+    csvwriter.writerow('Total:  $ 38382578')
+    csvwriter.writerow('The average change was  7803.48')
+    csvwriter.writerow('The greatest increase in profits was $ 1926159')
+    csvwriter.writerow('The greatest decrease in profits was $ -2196167')
+      
  
         
         
